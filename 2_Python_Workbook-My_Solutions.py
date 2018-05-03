@@ -170,6 +170,62 @@ print (f"Tax: {(plan+extra_minutes+extra_sms+charge911)*tax:.2f}$")
 print (f"Total: {plan+extra_minutes+extra_sms+charge911+tax:.2f}$")
 
 
+# 61
+# Average
+
+
+counter = 0
+sum_i = 0
+
+i = None
+
+while i != 0:
+    i = int(input("Enter the number: "))
+    sum_i += i
+    counter += 1
+    
+if counter == 1:
+    print("You have not entered any valid number. Average will not be calculated")
+else:
+    print(f"Average of numbers you've just entered is: {sum_i / (counter-1)}")
+
+# 69
+# Approximate Pi
+
+
+start = 2
+pi = 3
+
+for i in range(1,16):
+    if i % 2 == 1:
+        pi_addition = 4 / (start * (start + 1) * (start + 2))
+        pi_substraction = 0
+        start = start + 2
+        pi =  pi + pi_addition - pi_substraction
+        print(pi)
+
+    else:
+        pi_addition = 0
+        pi_substraction = 4 / (start * (start + 1) * (start + 2))
+        start = start + 2
+        pi =  pi + pi_addition - pi_substraction
+        print(pi)
+
+# 104
+# Sorted Order
+
+l = []
+i = None
+
+while i != 0:
+    i = int(input("Enter the number: "))
+    if i !=0 : l.append(i)
+
+
+for num in sorted(l):
+    print(num)
+
+
 # 130
 # Text Messaging
 
