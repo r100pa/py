@@ -170,6 +170,27 @@ print (f"Tax: {(plan+extra_minutes+extra_sms+charge911)*tax:.2f}$")
 print (f"Total: {plan+extra_minutes+extra_sms+charge911+tax:.2f}$")
 
 
+## 57
+## Is it a Leap Year?
+
+year = int(input("Enter year: "))
+
+if year % 400 == 0:
+    leap = True
+elif year % 100 == 0:
+    leap = False
+elif year % 4 == 0:
+    leap = True
+else:
+    leap = False
+
+if leap:
+    print("Year", year, "is leap.")
+else:
+    print("Year", year, "is not leap.")
+
+
+
 # 61
 # Average
 
@@ -225,7 +246,60 @@ while i != 0:
 for num in sorted(l):
     print(num)
 
+# 105
+# Reverse Order
+
+l = []
+i = None
+
+while i != 0:
+    i = int(input("Enter the number: "))
+    if i !=0 : l.append(i)
+
+#v1
+# for num in sorted(l, reverse=True):
+#v2
+for num in reversed(sorted(l)):
+    print(num)
+
+
+# 109
+# List of proper divisors
+
+def properDivisors(n):
+    result = []
+    for val in range (1,n):
+        if n % val == 0:
+            result.append(val)
+    return result
+
+def main():
+    n = int(input("Enter any number: "))
+    print("Proper divisors of",n,"are:",properDivisors(n))
+
+if __name__ == '__main__':
+    main()
+
+# 121
+# Count the Elements
+
+def countRange(l,mi,ma):
+    result = 0
+    for val in l:
+        if val >= mi and val < ma:
+            result = result + 1
+    return result
+
+
+def main():
+    l1 = [0,1,2,3,4,5,6,7,8,9]
+    l2 = [0.1,0.2,0.3,0.4,0.5]
+    print(countRange(l1,2,8))
+    print(countRange(l1,0,10))
+    print(countRange(l2,0.11,0.19))
+    print(countRange(l2,0.11,0.49))
+
+main()
 
 # 130
 # Text Messaging
-
