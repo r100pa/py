@@ -301,5 +301,20 @@ def main():
 
 main()
 
+# 127
+# The Sieve of Eratosthenes
+
+limit = int(input("Enter limit for the sieve: "))
+table = [x for x in range(2,limit+1)]
+
+for val in range(2,limit+1):
+    factor = 2
+    while val * factor <= limit:
+        if (val*factor) in table:
+            table.remove(val*factor)
+        factor = factor + 1
+
+print(table)
+
 # 130
 # Text Messaging
