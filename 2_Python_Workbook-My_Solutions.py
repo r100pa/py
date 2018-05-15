@@ -318,3 +318,22 @@ print(table)
 
 # 130
 # Text Messaging
+
+# 164
+# Total the Values
+
+def add():
+    number = input("Enter number: ")
+    if number != "":
+       global total
+       total  = total + float(number)
+       add()
+    return total
+
+def main():
+    global total
+    total = 0
+    add()
+    print(total)
+
+main()
