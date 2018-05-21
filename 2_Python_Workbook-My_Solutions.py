@@ -232,6 +232,34 @@ for i in range(1,16):
         pi =  pi + pi_addition - pi_substraction
         print(pi)
 
+# 71
+# Square root
+
+x = int(input("Enter number: "))
+
+guess = x / 2
+
+while abs(guess*guess - x) >= 10**-12:
+    guess = (guess + x / guess) / 2
+
+print(guess)
+
+# 75
+# Greatest common divisor
+
+n = int(input("Enter first number: "))
+m = int(input("Enter second number: "))
+
+d = min(n,m)
+
+while (m % d != 0) or (n % d != 0):
+    d = d - 1
+
+print(d)
+
+
+
+
 # 104
 # Sorted Order
 
