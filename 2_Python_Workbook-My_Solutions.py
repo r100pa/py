@@ -244,6 +244,22 @@ while abs(guess*guess - x) >= 10**-12:
 
 print(guess)
 
+# 74
+# Multiplication table
+
+print("    ",end="")
+for i in range (1,11):
+    print('{:4d}'.format(i), end="")
+print("\n")
+
+for i in range (1,11):
+    print('{:4d}'.format(i), end="")
+    for j in range(1,11):
+        print ('{:4d}'.format(i * j),end="")
+    print("\n")
+
+
+
 # 75
 # Greatest common divisor
 
@@ -257,7 +273,33 @@ while (m % d != 0) or (n % d != 0):
 
 print(d)
 
+# 76
+# Prime Factors
+n = int(input("Enter integer greater than 1: "))
+if n < 2:
+    print("I said 'GREATER THAN 1!'")
+factor = 2
+print("The prime factors of",n,"are:")
+while factor <= n:
+    if n % factor == 0:
+        print(factor)
+        n = n//factor
+    else:
+        factor = factor + 1
 
+# 77
+# Binary to Decimal
+
+b = input("Enter binary number: ")
+#‭11101011‬
+b = b[::-1]
+#11010111
+
+d = 0
+for pos in range(len(b)):
+    d = d + int(b[pos]) * 2 ** pos
+
+print(d)        
 
 
 # 104
